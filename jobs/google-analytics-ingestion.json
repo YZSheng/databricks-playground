@@ -1,0 +1,25 @@
+{
+  "name": "personal-data-ga job",
+  "description": "Ingests data from Google Analytics into Databricks",
+  "email_notifications": {},
+  "webhook_notifications": {},
+  "trigger": {
+    "pause_status": "UNPAUSED",
+    "periodic": {
+      "interval": 6,
+      "unit": "HOURS"
+    }
+  },
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "personal-data-ga_job",
+      "run_if": "ALL_SUCCESS",
+      "pipeline_task": {
+        "pipeline_id": "a251963d-b01f-4780-b594-0b1f750c526a"
+      },
+      "timeout_seconds": 0
+    }
+  ],
+  "format": "MULTI_TASK"
+}
